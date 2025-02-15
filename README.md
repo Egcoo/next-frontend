@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 智能答题应用平台前端代码
 
-## Getting Started
+#### `config`
+**配置文件**
+菜单列表、权限列表的配置文件。
 
-First, run the development server:
+#### `access`
+**权限管理**  
+所有和权限管理相关的代码都在这里。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#### `api`
+**API**
+使用`openapi-generator`生成的####
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### `components`
+**组件**
+项目中使用的通用组件。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### `layouts`
+**布局**
+定义应用的全局布局。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### `pages`
+**页面**
+应用的各个页面。
 
-## Learn More
+#### `stores`
+**状态管理**
+Redux 状态管理相关的代码。API代码。
 
-To learn more about Next.js, take a look at the following resources:
+#### `libs`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+文件用于创建和配置一个 Axios 实例 `myAxios`，用于处理 HTTP 请求。
+功能：
+1. 创建 Axios 实例并设置基础 URL 和超时时间。
+2. 配置请求拦截器，在请求发送前执行一些操作。
+3. 配置响应拦截器，处理响应数据和错误。
+4. 导出配置好的 Axios 实例供其他模块使用。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
