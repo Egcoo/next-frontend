@@ -117,6 +117,7 @@ declare namespace API {
     code?: number;
     data?: User;
     message?: string;
+    total: number;
   };
 
   type BaseResponseUserVO_ = {

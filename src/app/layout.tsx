@@ -6,7 +6,10 @@ import { Provider, useDispatch } from "react-redux";
 import store, { AppDispatch } from "@/stores";
 import { getLoginUserUsingGet } from "@/api/userController";
 import AccessLayout from "@/access/AccessLayout";
+import {setLoginUser} from "@/stores/loginUser";
 import "./globals.css";
+import LoginUserVO = API.LoginUserVO;
+
 
 /**
  * 全局初始化逻辑
@@ -24,6 +27,10 @@ const InitLayout: React.FC<
     const res = await getLoginUserUsingGet();
     if (res.data) {
       // 更新全局用户状态
+      const loginUser: LoginUserVO = {
+        // 将 res.data 的属性映射到 LoginUserVO 的属性
+      };
+      dispatch(setLoginUser(loginUser));
     } else {
       // 用于测试，强行三秒后登录
       // setTimeout(() => {
