@@ -117,7 +117,6 @@ declare namespace API {
     code?: number;
     data?: User;
     message?: string;
-    total: number;
   };
 
   type BaseResponseUserVO_ = {
@@ -527,7 +526,7 @@ declare namespace API {
     description?: string;
     id?: number;
     picture?: string;
-    questionPage?: PageQuestion_;
+    questionPage?: PageQuestionVO_;
     title?: string;
     updateTime?: string;
     user?: UserVO;

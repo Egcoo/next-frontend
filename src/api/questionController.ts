@@ -4,8 +4,8 @@ import request from '@/libs/request';
 
 /** addQuestion POST /api/question/add */
 export async function addQuestionUsingPost(
-  body: API.QuestionAddRequest,
-  options?: { [key: string]: any },
+    body: API.QuestionAddRequest,
+    options?: { [key: string]: any },
 ) {
   return request<API.BaseResponseLong_>('/api/question/add', {
     method: 'POST',
@@ -19,8 +19,8 @@ export async function addQuestionUsingPost(
 
 /** deleteQuestion POST /api/question/delete */
 export async function deleteQuestionUsingPost(
-  body: API.DeleteRequest,
-  options?: { [key: string]: any },
+    body: API.DeleteRequest,
+    options?: { [key: string]: any },
 ) {
   return request<API.BaseResponseBoolean_>('/api/question/delete', {
     method: 'POST',
@@ -34,8 +34,8 @@ export async function deleteQuestionUsingPost(
 
 /** editQuestion POST /api/question/edit */
 export async function editQuestionUsingPost(
-  body: API.QuestionEditRequest,
-  options?: { [key: string]: any },
+    body: API.QuestionEditRequest,
+    options?: { [key: string]: any },
 ) {
   return request<API.BaseResponseBoolean_>('/api/question/edit', {
     method: 'POST',
@@ -49,9 +49,9 @@ export async function editQuestionUsingPost(
 
 /** getQuestionVOById GET /api/question/get/vo */
 export async function getQuestionVoByIdUsingGet(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
-  params: API.getQuestionVOByIdUsingGETParams,
-  options?: { [key: string]: any },
+    // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+    params: API.getQuestionVOByIdUsingGETParams,
+    options?: { [key: string]: any },
 ) {
   return request<API.BaseResponseQuestionVO_>('/api/question/get/vo', {
     method: 'GET',
@@ -64,8 +64,8 @@ export async function getQuestionVoByIdUsingGet(
 
 /** listQuestionByPage POST /api/question/list/page */
 export async function listQuestionByPageUsingPost(
-  body: API.QuestionQueryRequest,
-  options?: { [key: string]: any },
+    body: API.QuestionQueryRequest,
+    options?: { [key: string]: any },
 ) {
   return request<API.BaseResponsePageQuestion_>('/api/question/list/page', {
     method: 'POST',
@@ -79,8 +79,8 @@ export async function listQuestionByPageUsingPost(
 
 /** listQuestionVOByPage POST /api/question/list/page/vo */
 export async function listQuestionVoByPageUsingPost(
-  body: API.QuestionQueryRequest,
-  options?: { [key: string]: any },
+    body: API.QuestionQueryRequest,
+    options?: { [key: string]: any },
 ) {
   return request<API.BaseResponsePageQuestionVO_>('/api/question/list/page/vo', {
     method: 'POST',
@@ -94,8 +94,8 @@ export async function listQuestionVoByPageUsingPost(
 
 /** listMyQuestionVOByPage POST /api/question/my/list/page/vo */
 export async function listMyQuestionVoByPageUsingPost(
-  body: API.QuestionQueryRequest,
-  options?: { [key: string]: any },
+    body: API.QuestionQueryRequest,
+    options?: { [key: string]: any },
 ) {
   return request<API.BaseResponsePageQuestionVO_>('/api/question/my/list/page/vo', {
     method: 'POST',
@@ -109,8 +109,8 @@ export async function listMyQuestionVoByPageUsingPost(
 
 /** updateQuestion POST /api/question/update */
 export async function updateQuestionUsingPost(
-  body: API.QuestionUpdateRequest,
-  options?: { [key: string]: any },
+    body: API.QuestionUpdateRequest,
+    options?: { [key: string]: any },
 ) {
   return request<API.BaseResponseBoolean_>('/api/question/update', {
     method: 'POST',

@@ -4,10 +4,12 @@ import { getQuestionVoByIdUsingGet } from "@/api/questionController";
 import QuestionCard from "@/components/QuestionCard";
 import "./index.css";
 
+
 /**
  * 题目详情页
  * @constructor
  */
+// @ts-ignore
 export default async function QuestionPage({ params }) {
   const { questionId } = params;
 
@@ -19,7 +21,8 @@ export default async function QuestionPage({ params }) {
     });
     question = res.data;
   } catch (e) {
-    message.error("获取题目详情失败，" + e.message);
+    const error = e as Error;
+    message.error("获取题目详情失败，" + error.message);
   }
   // 错误处理
   if (!question) {

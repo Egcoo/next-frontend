@@ -60,7 +60,7 @@ export default async function BankPage({ params }) {
                 target="_blank"
                 disabled={!firstQuestionId}
               >
-                开始刷题
+                开始学习
               </Button>
             </>
           }
