@@ -39,6 +39,7 @@ Redux 状态管理相关的代码。API代码。
 
 
 前端页面开发，跑通前后端核心业务流程
+
 主要包括：
 - 基础页面开发
   - 用户模块
@@ -55,3 +56,12 @@ Redux 状态管理相关的代码。API代码。
   - 修改题目所属题库
 
 记住：next.js 的路由是基于文件系统的，所以在 pages 目录下创建的文件会自动映射到对应的路由上。
+
+
+
+
+npm install --save echarts
+npm install echarts-for-react
+
+
+
