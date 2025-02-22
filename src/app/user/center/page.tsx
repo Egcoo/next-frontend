@@ -48,7 +48,7 @@ export default function UserCenterPage() {
               },
               {
                 key: "others",
-                label: "其他",
+                label: "修改个人信息",
               },
             ]}
             activeTabKey={activeTabKey}
