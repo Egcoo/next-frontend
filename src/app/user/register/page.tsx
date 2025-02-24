@@ -1,5 +1,5 @@
 "use client";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import {IdcardOutlined, LockOutlined, UserOutlined} from "@ant-design/icons";
 import { LoginForm, ProFormText } from "@ant-design/pro-components";
 import React from "react";
 import Image from "next/image";
@@ -8,7 +8,8 @@ import { userRegisterUsingPost } from "@/api/userController";
 import { message } from "antd";
 import { ProForm } from "@ant-design/pro-form/lib";
 import { useRouter } from "next/navigation";
-import './index.css';
+import "./index.css";
+import { ProFormTextArea } from "@ant-design/pro-form";
 
 /**
  *
@@ -42,7 +43,12 @@ const UserRegisterPage: React.FC = () => {
       <LoginForm
         form={form}
         logo={
-          <Image src="/assets/logo.png" alt="智能答题应用平台" height={44} width={44} />
+          <Image
+            src="/assets/logo.png"
+            alt="智能答题应用平台"
+            height={44}
+            width={44}
+          />
         }
         title="智能答题应用平台 - 用户注册"
         subTitle="自我提升、面试刷题平台"
@@ -57,13 +63,41 @@ const UserRegisterPage: React.FC = () => {
           name="userAccount"
           fieldProps={{
             size: "large",
-            prefix: <UserOutlined />,
+            prefix: <IdcardOutlined />,
           }}
           placeholder={"请输入用户账号"}
           rules={[
             {
               required: true,
               message: "请输入用户账号!",
+            },
+          ]}
+        />
+        <ProFormText
+          name="userName"
+          fieldProps={{
+            size: "large",
+            prefix: <UserOutlined />,
+          }}
+          placeholder={"请输入用户名"}
+          rules={[
+            {
+              required: true,
+              message: "请输入用户名!",
+            },
+          ]}
+        />
+        <ProFormTextArea
+          name="userProfile"
+          fieldProps={{
+            rows: 2, // 设置多行文本框的高度
+            style: { width: "100%" },
+          }}
+          placeholder={"请输入个人简介"}
+          rules={[
+            {
+              required: false, // 是否必填
+              message: "请输入个人简介!",
             },
           ]}
         />
